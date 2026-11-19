@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JobPortal | Find your next opportunity</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="#"><span class="brand-mark">J</span> JobPortal</a>
+  <nav><a href="#jobs">Find Jobs</a><a href="#how">How it works</a></nav>
+  <div class="nav-actions"><button class="btn btn-outline" id="loginBtn">Log in</button><button class="btn btn-primary" id="signupBtn">Sign up</button></div>
+</header>
+<main>
+  <section class="hero">
+    <div class="hero-content">
+      <span class="eyebrow">CAREER STARTS HERE</span>
+      <h1>Find a job where<br><em>you belong.</em></h1>
+      <p>Discover opportunities, build your future, and take the next step in your career.</p>
+      <div class="search-panel">
+        <label><span>What are you looking for?</span><input id="searchInput" placeholder="Job title, skill or company"></label>
+        <label class="location"><span>Location</span><input id="locationInput" placeholder="City or remote"></label>
+        <button class="btn btn-primary" id="searchBtn">Search jobs</button>
+      </div>
+      <small class="popular">Popular: <a href="#" data-search="Frontend">Frontend</a> · <a href="#" data-search="Laravel">Laravel</a> · <a href="#" data-search="Designer">Designer</a></small>
+    </div>
+    <div class="hero-art" aria-label="Career opportunity illustration">
+      <div class="art-card card-one"><span class="art-icon">✦</span><b>Make your next move</b><small>New opportunities daily</small></div>
+      <div class="art-card card-two"><div class="avatar-row"><span class="avatar">👩🏽‍💻</span><span class="avatar">👨🏻‍💼</span><span class="avatar">👩🏻‍🎨</span></div><b>Good people.<br>Great teams.</b></div>
+      <div class="art-orbit"></div><div class="art-dot dot-a"></div><div class="art-dot dot-b"></div>
+    </div>
+  </section>
+  <section class="stats"><div><strong>1,200+</strong><span>Open roles</span></div><div><strong>450+</strong><span>Companies</span></div><div><strong>8,000+</strong><span>Career journeys</span></div></section>
+  <section class="jobs-section" id="jobs">
+    <div class="section-head"><div><span class="eyebrow">CURATED FOR YOU</span><h2>Explore opportunities</h2></div><span class="count" id="jobCount"></span></div>
+    <div class="filters"><button class="filter active" data-filter="All">All jobs</button><button class="filter" data-filter="Engineering">Engineering</button><button class="filter" data-filter="Design">Design</button><button class="filter" data-filter="Marketing">Marketing</button><button class="filter" data-filter="Remote">Remote</button></div>
+    <div class="job-grid" id="jobGrid"></div>
+  </section>
+  <section class="how-section" id="how"><span class="eyebrow">SIMPLE STEPS</span><h2>Your next role is closer than you think.</h2><div class="steps"><article><span>01</span><h3>Discover</h3><p>Search jobs that match your skills, interests, and goals.</p></article><article><span>02</span><h3>Apply</h3><p>Share your profile and apply to roles that inspire you.</p></article><article><span>03</span><h3>Grow</h3><p>Keep track of your applications and move forward.</p></article></div></section>
+</main>
+<footer><a class="brand" href="#"><span class="brand-mark">J</span> JobPortal</a><p>Helping people find meaningful work.</p><span>© 2026 JobPortal Demo</span></footer>
+<div class="modal-backdrop hidden" id="modal"><div class="modal"><button class="close" id="closeModal" aria-label="Close">×</button><span class="eyebrow">QUICK APPLICATION</span><h2 id="modalTitle">Apply for this role</h2><form id="applyForm"><input type="hidden" id="applyJobId"><label>Full name<input id="appName" required placeholder="Your name"></label><label>Email address<input id="appEmail" type="email" required placeholder="you@example.com"></label><label>LinkedIn or portfolio URL<input id="appPortfolio" type="url" placeholder="https://"></label><button class="btn btn-primary submit" type="submit">Submit application</button></form></div></div>
+<div class="toast" id="toast"></div>
+<script src="app.js"></script>
+</body>
+</html>
